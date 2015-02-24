@@ -1,0 +1,7 @@
+[user]
+	email = fortytw2@gmail.com
+	name = fortytw2
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[push]
+	default = simple

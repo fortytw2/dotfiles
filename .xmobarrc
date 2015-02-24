@@ -1,0 +1,19 @@
+Config { font = "xft:Envy Code R:size=8:antialias=true"
+       , bgColor = "#002b36"
+       , fgColor = "#eee8d5"
+       , position = Top
+       , lowerOnStart = True
+       , commands = [ Run Weather "KRDU" ["-t","weather - <tempC> C","-L","18","-H","25","--normal","#eee8d5","--high","#dc322f","--low","#268bd2"] 36000
+                    , Run Cpu ["-t", "cpu - <total>%", "-L","3","-H","50","--normal","#dc322f","--high","#85990"] 10
+                    , Run Memory ["-t","memory - <usedratio>%"] 10
+		    , Run ThermalZone 0 ["-t","<temp> C","-L","40","-H","79","-h","#dc322f","-n","yellow","-l","#eee8d5"] 10
+                    , Run Battery ["-t","<left>%","-L","50","-H","75","-h","#eee8d5","-n","yell","-l","#dc322f"] 10                    
+		    , Run Network "wlp4s0" ["-t","network - <rx>KB/<tx>KB","-L","0","-H","32","--normal","#eee8d5","--high","#dc322f"] 10
+                    , Run Com "uname" ["-s","-r"] "" 36000
+		    , Run StdinReader
+                    , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% | %cpu% | %thermal0% | %memory% | %wlp4s0% }{ <fc=#268bd2>%date%</fc> | %KRDU% | %uname% | %battery%"
+       }
