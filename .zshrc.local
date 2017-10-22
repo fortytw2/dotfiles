@@ -1,0 +1,11 @@
+bindkey -v
+
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+
+export GOPATH=~/go
+export PATH=$PATH:$GOPATH/bin
+export CDPATH=.:$HOME:$GOROOT/src:$GOPATH/src:$GOPATH/src/golang.org:$GOPATH/github.com:
+export EDITOR=kak
+
+alias vim="vim -S ~/.vimrc"
