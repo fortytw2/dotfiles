@@ -1,0 +1,15 @@
+base
+base-devel
+
+zsh
+grml-zsh-config
+fzf
+htop
+
+xorg-xinit
+xorg-server
+dmenu
+
+go
+git
+
